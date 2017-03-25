@@ -3,29 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Набор для путешествий «Baxter of California»</title>
+	<link rel="icon" href="favicon.ico" type="x-icon">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="inner-page">
 	<header class="main-header">
 	<div class="container">
 	<nav class="main-navigation">
 		<ul>
 			<li>
-				<a href="index.html">Главная</a>
-			</li>
-			<li>
-				<a href="#">Информация</a>
+				<a class="Logo-header" href="index.html"><img src="img/Logo-header.png" width="111" height="24" alt="Барбершоп Бородинский"></a>
 			</li>
 			<li>
 				<a href="#">Новости</a>
 			</li>
 			<li>
-				<a href="#">Прайс-лист</a>
+				<a href="price.html">Прайс-лист</a>
+			</li>
+			<li class="active">
+				<a href="shop.html">Магазин</a>
 			</li>
 			<li>
-				<a href="#">Магазин</a>
+				<a class="linkEnroll" href="">Записаться</a>
 			</li>
 			<li>
-				<a href="#">Контакты</a>
+				<a href="#contacts">Контакты</a>
 			</li>
 		</ul>
 	</nav>
@@ -35,27 +38,28 @@
 	</div>
 	</header>
 	<main class="container">
-		<div class="main">
+		<div class="title-page">
 			<h1>Набор для путешествий «Baxter of California»</h1>
 			<ul>
-				<li><a href="index.html">ГЛАВНАЯ</a></li>
-				<li><a href="shop.html">МАГАЗИН</a></li>
-				<li><a href="">СРЕДСТВА ДЛЯ УХОДА</a></li>
-				<li><a href="">Набор для путешествий «Baxter of California»</a></li>
+				<li class="romb"><a href="index.html">ГЛАВНАЯ</a></li>
+				<li class="romb"><a href="shop.html">МАГАЗИН</a></li>
+				<li class="romb"><a href="">СРЕДСТВА ДЛЯ УХОДА</a></li>
+				<li class="current">Набор для путешествий «Baxter of California»</li>
 			</ul>
 		</div>
+		<div class="content-page clearfix">
 		<div class="product-foto">
 			<div class="big-foto">
-			<img src="">
+			<img src="img/travel-baxter-of-california0.jpg" width="460" height="498" alt="BAXTER OF CALIFORNIA">
 			</div>
 			<div class="small-foto">
-			<img src="">
+			<img src="img/travel-baxter-of-california1.jpg" width="140" height="149" alt="BAXTER OF CALIFORNIA">
 			</div>
 			<div class="small-foto">
-			<img src="">
+			<img src="img/travel-baxter-of-california2.jpg" width="140" height="149" alt="BAXTER OF CALIFORNIA">
 			</div>
 			<div class="small-foto">
-			<img src="">
+			<img src="img/travel-baxter-of-california3.jpg" width="140" height="149" alt="BAXTER OF CALIFORNIA">
 			</div>
 		</div>
 		<section class="about-product">
@@ -64,11 +68,11 @@
 			</p>
 			<div class="buy">
 				<span>2 900 руб.</span>
-				<a href="">Купить</a>
+				<a class="bth" href="">Купить</a>
 			</div>
 			<div class="set">
 			<h2>В набор входят:</h2>
-			<ul class="kit">
+			<ul class="list1">
 				<li>средство для умывания (50 мл)</li>
 				<li>увлажняющий крем (50 мл)</li>
 				<li>крем для бритья (50 мл)</li>
@@ -77,13 +81,14 @@
 			</ul>
 			</div>
 		</section>
+		</div>
 	</main>
-	<footer class="main-footer">
+	<footer class="main-footer" id="contacts">
 	<div class="container">
 	<section class="footer-contacts">
 	Барбершоп "Бородинский"<br>
 	Адрес: г.Санкт-Петербург, Б.Конюшенская, д.19/8<br>
-	<a href="#">Как нас найти?</a><br>
+	<a class="js-map" href="#">Как нас найти?</a><br>
 	Телефон: +7(812) 666-02-66
 	</section>
 	<section class="footer-social">
@@ -92,7 +97,47 @@
 	<a class="social-bth social-bth-fb" href="#">Фейсбук</a>
 	<a class="social-bth social-bth-inst" href="#">Инстаграм</a>
 	</section>
+	<section class="footer-copyright">
+	<p>Разработано:</p>
+	<a class="bth" href="https://stepan313.github.io/CatPlaton/">CatPlaton</a>
 	</div>	
 	</footer>
+	<div class="enter-login">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="enter-login-title">Личный кабинет</h2>
+		<p>Ведите свой логин и пароль.</p>
+		<form class="login-form" action="ttps://echo.htmlacalemy.ru" method="post">
+			<input class="user" type="text" name="login"  placeholder="Логин">
+			<input class="password" type="password" name="password" placeholder="Пароль">
+			<label class="login-checkbox" >
+				<input type="checkbox" name="remember">
+				<span class="checkbox-indicator"></span>
+				Запомните меня
+			</label>
+			<a class="restore" href="">Я забыл пароль!</a>
+			<button class="bth" type="submit">Войти</button>
+		</form>
+	</div>
+	<div class="map">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+
+		<div id="yandex-map"></div>
+	</div>
+	<div class="overlay"></div>
+	<div class="Enroll">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+			<h2 class="index-content-title">Записаться</h2>
+			<p>Укажите желаемую дату и время и мы свяжемся с вами для потверждения брони</p>
+			<FORM class="appointment-form" action="ttps://echo.htmlacalemy.ru" method="post" >
+				<input type="text" name="data" value="" placeholder="Дата" required>
+				<input type="text" name="time" value="" placeholder="Время" required>
+				<input type="text" name="name" value="" placeholder="Ваше имя" required>
+				<input type="text" name="phone" value="" placeholder="Телефон" required>
+				<button class="bth" type="submit">Отправить</button>
+			</FORM>	
+	</div>
+<script src="script.js"></script>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c1b7a7aff4749ae97a6a5a9f359848478dcef40e508ab946e443aec626d3d8d&amp;width=766&amp;height=560&amp;id=yandex-map&amp;lang=ru_RU&amp;scroll=true"></script>
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп "Бородинский"</title>
-	<link rel="icon" href="favicon_1.ico" type="x-icon">
+	<link rel="icon" href="favicon.ico" type="x-icon">
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -13,23 +13,23 @@
 	<nav class="main-navigation">
 		<ul>
 			<li>
-				<a href="index.html">Главная</a>
+				<a class="Logo-header" href="index.html"><img src="img/Logo-header.png" width="111" height="24" alt="Барбершоп Бородинский"></a>
 			</li>
 			
 			<li>
 				<a href="#">Новости</a>
 			</li>
 			<li>
-				<a href="#">Прайс-лист</a>
+				<a href="price.html">Прайс-лист</a>
 			</li>
 			<li>
-				<a href="#">Магазин</a>
+				<a href="shop.html">Магазин</a>
 			</li>
 			<li>
-				<a href="">Записаться</a>
+				<a class="linkEnroll" href="#">Записаться</a>
 			</li>
 			<li>
-				<a href="#">Контакты</a>
+				<a href="#contacts">Контакты</a>
 			</li>
 		</ul>
 	</nav>
@@ -75,7 +75,9 @@
 			<h2 class="index-content-title">Фотогалерея</h2>
 			<div class="gallery">
 			<figure class="gallery-content">
-			<img src="img/foto1.jpg" width="286" height="164" alt="Фотогалерея">
+			<img id="image" src="img/foto1.jpg" width="286" height="164" alt="Фотогалерея">
+			<img src="img/foto2.jpg" width="286" height="164" alt="Фотогалерея">
+			<img src="img/foto3.jpg" width="286" height="164" alt="Фотогалерея">
 			</figure>
 				<button class="bth gallery-prev">Назад</button>
 				<button class="bth gallery-next">Вперед</button>
@@ -93,17 +95,17 @@
 			пн-пт: с 10:00 до 22:00<br>
 			сб-вс: с 10:00 до 19:00
 			</p>
-			<a class="bth" href="#">Как проехать</a>
+			<a class="bth js-map" href="#">Как проехать</a>
 			<a class="bth" href="#">Обратная связь</a>
 			</div>
 			<div class="index-content-right">
 			<h2 class="index-content-title">Записаться</h2>
 			<p>Укажите желаемую дату и время и мы свяжемся с вами для потверждения брони</p>
 			<FORM class="appointment-form" action="ttps://echo.htmlacalemy.ru" method="post" >
-				<input type="text" name="data" value="" placeholder="Дата">
-				<input type="text" name="time" value="" placeholder="Время">
-				<input type="text" name="name" value="" placeholder="Ваше имя">
-				<input type="text" name="phone" value="" placeholder="Телефон">
+				<input type="text" name="data" value="" placeholder="Дата" required>
+				<input type="text" name="time" value="" placeholder="Время" required>
+				<input type="text" name="name" value="" placeholder="Ваше имя" required>
+				<input type="text" name="phone" value="" placeholder="Телефон" required>
 				<button class="bth" type="submit">Отправить</button>
 			</FORM>
 			</div>
@@ -111,10 +113,10 @@
 	</main>
 	<footer class="main-footer">
 	<div class="container">
-	<section class="footer-contacts">
+	<section class="footer-contacts" id="contacts">
 	Барбершоп "Бородинский"<br>
 	Адрес: г.Санкт-Петербург, Б.Конюшенская, д.19/8<br>
-	<a href="#">Как нас найти?</a><br>
+	<a class="js-map1" href="#">Как нас найти?</a><br>
 	Телефон: +7(812) 666-02-66
 	</section>
 	<section class="footer-social">
@@ -128,5 +130,42 @@
 	<a class="bth" href="https://stepan313.github.io/CatPlaton/">CatPlaton</a>
 	</div>	
 	</footer>
+	<div class="enter-login">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+		<h2 class="enter-login-title">Личный кабинет</h2>
+		<p>Ведите свой логин и пароль.</p>
+		<form class="login-form" action="ttps://echo.htmlacalemy.ru" method="post">
+			<input class="user" type="text" name="login"  placeholder="Логин">
+			<input class="password" type="password" name="password" placeholder="Пароль">
+			<label class="login-checkbox" >
+				<input type="checkbox" name="remember">
+				<span class="checkbox-indicator"></span>
+				Запомните меня
+			</label>
+			<a class="restore" href="">Я забыл пароль!</a>
+			<button class="bth" type="submit">Войти</button>
+		</form>
+	</div>
+	<div class="map">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+
+		<div id="yandex-map"></div>
+	</div>
+	<div class="overlay"></div>
+	<div class="Enroll">
+		<button class="close" type="button" title="Закрыть">Закрыть</button>
+			<h2 class="index-content-title">Записаться</h2>
+			<p>Укажите желаемую дату и время и мы свяжемся с вами для потверждения брони</p>
+			<FORM class="appointment-form" action="ttps://echo.htmlacalemy.ru" method="post" >
+				<input type="text" name="data" value="" placeholder="Дата" required>
+				<input type="text" name="time" value="" placeholder="Время" required>
+				<input type="text" name="name" value="" placeholder="Ваше имя" required>
+				<input type="text" name="phone" value="" placeholder="Телефон" required>
+				<button class="bth" type="submit">Отправить</button>
+			</FORM>	
+	</div>
+<script src="script.js"></script>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c1b7a7aff4749ae97a6a5a9f359848478dcef40e508ab946e443aec626d3d8d&amp;width=766&amp;height=560&amp;id=yandex-map&amp;lang=ru_RU&amp;scroll=true"></script>
+
 </body>
 </html>
