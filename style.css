@@ -426,6 +426,10 @@ background: #00000;
 .close::after{
 	transform: rotate(-45deg);
 }
+.map .close::before,
+.map .close::after{
+	background: #808080;
+}
 .enter-login h2{
 	margin: 0;
 	margin-bottom: 20px;
@@ -634,7 +638,7 @@ background: #00000;
 .title-page a:hover{
 	text-decoration: underline;
 }
-.title-page .current{
+.current{
 	color: #aba9a7;
 }
 .content-page{
@@ -919,3 +923,41 @@ background: #00000;
 .set .list1 li{
 	margin-bottom: 5px;
 }
+
+/*новости#f8f5f2 url(img/white.jpg*/
+.news-left{
+	float: left;
+	margin-top: 60px;
+}
+
+.news-left a{
+	color: #000000;
+	text-decoration: none;
+}
+.news-left a:hover{
+	text-decoration: underline;
+}
+.news-left li{
+	margin-bottom: 15px;
+}
+.news-right{
+	float: right;
+	margin-top: 60px;
+	margin-right: 250px;
+	
+	
+}
+.image-news{
+	background: #ffffff;
+	 width: 530px;
+	 min-height: 450px;
+	 margin-bottom: 60px;
+	 padding:0;
+	 text-align: center;
+	 border: 10px solid #ffffff;
+	 box-shadow: 0px 0px 15px 0px rgba(0, 1, 1, 0.2);
+}
+.image-news a{
+	color: #000000;
+}
+
